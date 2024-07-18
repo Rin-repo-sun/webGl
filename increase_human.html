@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<title>動的国家デモ</title>
+</head>
+<body>
+<h1>動的国家デモ</h1>
+<div id="population">初期人口: 1000000人</div>
+<script>
+  let population = 1000000; // 初期人口
+
+  function updatePopulation() {
+    population += Math.floor(Math.random() * 100); // 人口をランダムに増加
+    document.getElementById('population').innerText = `現在の人口: ${population}人`;
+  }
+
+  setInterval(updatePopulation, 1000); // 1秒ごとに人口を更新
+</script>
+</body>
+</html>
